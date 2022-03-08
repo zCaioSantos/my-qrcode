@@ -1,0 +1,58 @@
+.container-form {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(41, 41, 124);
+}
+
+.container-form input {
+    width: 30%;
+    padding: 10px;
+
+    margin-bottom: 1em;
+}
+
+.container-form button {
+    width: 30%;
+    padding: 10px;
+}
+
+img {
+    animation: opacityUpIn 1s ease;
+    margin: 1em 0;
+}
+
+.qrcode-container {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@keyframes opacityUpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
