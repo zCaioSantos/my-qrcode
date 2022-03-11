@@ -13,7 +13,11 @@
 
 # Installation
 
-Download the latest version from [releases page](https://github.com/zCaioSantos/myqrcode/releases) and run it.
+<div align="center">
+   <a href="https://user-images.githubusercontent.com/81544166/157966299-fffe4163-00c5-429b-8c2c-4a1b727b1e32.png"><img src="https://user-images.githubusercontent.com/81544166/157966299-fffe4163-00c5-429b-8c2c-4a1b727b1e32.png" alt="Download button" /></a>
+   <p>Download the latest version from  <a href="https://github.com/zCaioSantos/myqrcode/releases">releases page</a>and run it.</p>
+
+</div>
 
 # Contributing
 
