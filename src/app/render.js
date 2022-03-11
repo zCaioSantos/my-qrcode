@@ -15,13 +15,14 @@ const aplicativo = {
 const qrcode = {
     create() {
         const api =
-            "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=";
+            "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
 
         const option =
             options.whichOneIsActive() === true
                 ? "input-website"
                 : "input-texto";
         const url = document.getElementById(option).value;
+        
 
         if (url !== "") {
             const qr = api + url;
