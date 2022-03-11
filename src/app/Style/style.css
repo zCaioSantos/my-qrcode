@@ -1,0 +1,356 @@
+:root {
+    --primaria: #bababa;
+    --segundaria: #636363;
+    --terciario: #0d0d0d;
+    --quartario: #141414;
+}
+
+*,
+*::after,
+*::backdrop {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: var(--primaria);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #0d0d0d;
+    padding: 5px 0;
+    -webkit-app-region: drag;
+}
+
+header > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 10px;
+}
+
+header > nav > p {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #444444;
+}
+
+header > nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    -webkit-app-region: no-drag;
+}
+
+header > nav > ul > li > button {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    outline: none;
+    border: none;
+}
+
+header > nav > ul > li > #minBtn {
+    background-color: #ffa62e;
+
+}
+
+header > nav > ul > li > #resizeBtn {
+    background-color: #55cc43;
+}
+
+header > nav > ul > li > #closeBtn {
+    background-color: #e81123;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+}
+
+.container__section__1 {
+    padding: 50px;
+    animation: entrada 3s ease;
+
+    width: 70%;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.container__section__1 > .cards__container {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.container__section__1 > .cards__container > label > input[type=radio] {
+    display: none;
+}
+
+.container__section__1 > .cards__container > label > .card__sigle {
+    width: 90px;
+    height: 95px;
+
+    border: 1px solid var(--segundaria);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    fill: var(--segundaria);
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container__section__1 > .cards__container > label > .card__sigle {
+    margin-bottom: 30px;
+}
+
+.container__section__1 > .cards__container > label > .card__sigle p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--segundaria);
+    transition: 0.3s ease;
+}
+
+.container__section__1 > .cards__container > label > .card__sigle:hover {
+    border: 1px solid var(--primaria);
+    color: var(--primaria);
+    fill: var(--primaria);
+}
+
+.container__section__1 > .cards__container > label > .card__sigle:hover p {
+    color: var(--primaria);
+}
+
+.container__section__1 > .cards__container > label > input[type=radio]:checked + .card__sigle {
+    border: 1px solid var(--primaria) !important;
+    color: var(--primaria) !important;
+    fill: var(--primaria) !important;
+    color: var(--primaria) !important;
+}
+
+
+.container__section__1 > .cards__container label input:checked + .card__sigle p {
+    color: var(--primaria) !important;
+}
+
+
+.container__section__1 > .form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-input > label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-input > input,
+.form-input > button {
+    width: 368px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-input > input {
+    background: transparent;
+    font-size: 12px;
+    font-weight: 300;
+
+    border: 1px solid var(--segundaria);
+
+    margin-bottom: 30px;
+
+    outline: none;
+
+    transition: border .3s ease;
+}
+
+.form-input > input:focus {
+    border: 1px solid white;
+}
+
+.form-input > button {
+    background-color: white;
+    color: var(--terciario);
+    border: none;
+
+    position: relative;
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+    display: inline-block;
+}
+
+.form-input > button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-input > button::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.form-input > button::after {
+    background-color: #fff;
+}
+
+.form-input > button:active::after {
+    transform: scaleX(1.1) scaleY(1.6);
+    opacity: 0;
+}
+
+.form-input.hidden {
+    display: none;
+}
+
+
+/* SECTION 2 */
+.container__section__2 {
+    width: auto;
+    min-width: 30%;
+    height: 100%;
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--quartario);
+}
+
+.container__section__2 > .previa__qrcode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__section__2 > .previa__qrcode > img {
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.container__section__2 > .previa__qrcode > p {
+    font-weight: 300;
+    font-size: 12px;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container__section__2 > .previa__qrcode > button {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid var(--segundaria);
+
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+
+    cursor: pointer;
+
+    transition: color .3s ease;
+}
+
+.container__section__2 > .previa__qrcode > button::before {
+    content: "";
+    width: 100%;
+    height: 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+
+    background-color: #fff;
+
+    transition: .3s ease;
+}
+
+.container__section__2 > .previa__qrcode > button:hover::before {
+    height: 100%;
+}
+
+.container__section__2 > .previa__qrcode > button:hover {
+    color: var(--terciario);
+}
+
+.container__section__2 > .previa__qrcode > button:active::before {
+    transform: scaleX(1.1) scaleY(1.6);
+    opacity: 0;
+}
+
+
+.animacaoEntrada {
+    animation: entrada .3s ease;
+}
+
+.animacaoSaida {
+    animation: saida .3s ease;
+}
+
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes saida {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(5);
+    }
+}

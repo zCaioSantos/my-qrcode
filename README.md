@@ -10,8 +10,7 @@
 # Features
 
 - [x] Gerar qrcode
-- [x] Baixar qrcode
-- [x] Escolher o tamanho
+- [ ] Baixar qrcode
+- [ ] Escolher o tamanho
 - [ ] Escolher cores
 - [ ] Colocar logo
-- [ ] App para desktop
