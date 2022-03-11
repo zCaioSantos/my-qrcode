@@ -13,7 +13,7 @@
 
 # Installation
 
-Download the latest version from - and run it.
+Download the latest version from [releases page](https://github.com/zCaioSantos/myqrcode/releases) and run it.
 
 # Contributing
 
