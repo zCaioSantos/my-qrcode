@@ -4,8 +4,8 @@
     "description": "Um gerador simples de Qr Code",
     "main": "main.js",
     "author": {
-      "name": "Caio Santos",
-      "email": "caio.fernandes72@gmail.com"
+        "name": "Caio Santos",
+        "email": "caio.fernandes72@gmail.com"
     },
     "scripts": {
         "start": "electron .",
@@ -34,6 +34,7 @@
         "electron-builder": "^22.14.13"
     },
     "dependencies": {
-        "path": "^0.12.7"
+        "path": "^0.12.7",
+        "qrcode": "^1.5.0"
     }
 }

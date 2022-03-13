@@ -26,6 +26,8 @@ const qrcode = {
 
         if (url !== "") {
             options.qrPreviewOpen();
+            options.salvarEnable(url);
+
             const qr = api + url;
             const img = document.getElementById("previu__qr");
             img.src = "../../public/Image/loop.gif";
@@ -71,6 +73,13 @@ const options = {
     qrPreviewClose() {
         const menu = document.getElementById("container__section__2");
         menu.classList.remove("animacaoEntradaEsquerda")
+    },
+    salvarEnable(url) {
+        const btn = document.getElementById("bnt__salvar");
+        btn.disabled = false;
+        btn.addEventListener('click', () => {
+            app.saveQrcode(url)
+        })
     }
 };
 

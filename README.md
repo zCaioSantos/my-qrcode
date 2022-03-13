@@ -41,7 +41,7 @@ npm start
 ## Features
 
 - [x] Gerar qrcode
-- [ ] Salvar qrcode
+- [x] Salvar qrcode
 - [ ] Escolher o tamanho
 - [ ] Escolher cores
 - [ ] Colocar logo
