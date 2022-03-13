@@ -80,7 +80,7 @@ header > nav > ul > li {
 }
 
 header > nav > ul > li:hover {
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 main {
@@ -261,6 +261,9 @@ h1 {
     flex-direction: column;
     align-items: center;
 
+    /* cursor: pointer; */
+    transition: transform 2s ease;
+    transform: translateX(600px);
     background-color: var(--quartario);
 }
 
@@ -334,24 +337,10 @@ h1 {
     animation: entrada .3s ease;
 }
 
-.animacaoSaida {
-    animation: saida .3s ease;
+.animacaoEntradaEsquerda {
+    transform: translateX(0);
+    transition: transform 2s ease;
 }
-
-.animacaoEntradaLeft {
-    animation: entradaRigth 3s ease-out forwards;
-}
-
-@keyframes entradaRigth {
-    0% {
-        transform: translateX(500px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 
 @keyframes entrada {
     0% {
@@ -362,17 +351,5 @@ h1 {
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes saida {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(5);
     }
 }

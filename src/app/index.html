@@ -47,7 +47,7 @@
                     </label>
 
                     <label for="option__texto" id="card-text">
-                        <input type="radio" id="option__texto" name="option" value="texto">
+                        <input type="radio" id="option__texto" name="option" value="texto" required>
                         <div class="card__sigle">
                             <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H19C19.2761 1.5 19.5 1.27614 19.5 1C19.5 0.723858 19.2761 0.5 19 0.5H1ZM1 4.5C0.723858 4.5 0.5 4.72386 0.5 5C0.5 5.27614 0.723858 5.5 1 5.5H15C15.2761 5.5 15.5 5.27614 15.5 5C15.5 4.72386 15.2761 4.5 15 4.5H1ZM0.5 9C0.5 8.72386 0.723858 8.5 1 8.5H19C19.2761 8.5 19.5 8.72386 19.5 9C19.5 9.27614 19.2761 9.5 19 9.5H1C0.723858 9.5 0.5 9.27614 0.5 9ZM1 12.5C0.723858 12.5 0.5 12.7239 0.5 13C0.5 13.2761 0.723858 13.5 1 13.5H15C15.2761 13.5 15.5 13.2761 15.5 13C15.5 12.7239 15.2761 12.5 15 12.5H1Z"/>
@@ -59,24 +59,24 @@
 
                 <form class="form-input" id="form-website" >
                     <label for="input-website">Insira o seu website</label>
-                    <input id="input-website" type="url" placeholder="http://www.seusite.com.br">
+                    <input id="input-website" type="url" placeholder="http://www.seusite.com.br" required>
                     <button onclick="qrcode.create();" type="submit">Gerar QR Code</button>
                 </form>
 
                 <form class="form-input hidden" id="form-text">
                     <label for="input-texto">Insira um texto</label>
-                    <input id="input-texto" type="texto" placeholder="Texto que deseja compartilhar">
+                    <input id="input-texto" type="texto" placeholder="Texto que deseja compartilhar" required>
                     <button onclick="qrcode.create();" type="submit">Gerar QR Code</button>
                 </form>
                 
             </section>
 
-            <section class="container__section__2 animacaoEntradaLeft" id="container__section__2">
+            <section class="container__section__2" id="container__section__2">
                 <h1>Prévia</h1>
                 <div class="previa__qrcode">
                     <img id="previu__qr" height="150" width="150" src="../../public/Image/Qr code.png" alt="QR-Code">
                     <p>Faça o download do seu QR code e potencialize a estratégia da sua marca.</p>
-                    <!-- <button>Salvar</button> -->
+                    <button>Salvar</button>
                 </div>
             </section>
         </main>

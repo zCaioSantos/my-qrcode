@@ -25,6 +25,7 @@ const qrcode = {
         
 
         if (url !== "") {
+            options.qrPreviewOpen();
             const qr = api + url;
             const img = document.getElementById("previu__qr");
             img.src = "../../public/Image/loop.gif";
@@ -63,6 +64,14 @@ const options = {
             return false;
         }
     },
+    qrPreviewOpen() {
+        const menu = document.getElementById("container__section__2");
+        menu.classList.add("animacaoEntradaEsquerda")
+    },
+    qrPreviewClose() {
+        const menu = document.getElementById("container__section__2");
+        menu.classList.remove("animacaoEntradaEsquerda")
+    }
 };
 
 // Toggle options
@@ -72,6 +81,9 @@ document
 document
     .getElementById("card-text")
     .addEventListener("click", () => options.toggle());
+// document
+//     .getElementById("container__section__2")
+//     .addEventListener("click", () => options.qrPrevieClose());
 
 // Cancelar evento padrao do form
 document.getElementById("form-website").addEventListener("submit", (event) => {

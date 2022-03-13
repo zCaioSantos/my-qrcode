@@ -7,7 +7,6 @@
       "name": "Caio Santos",
       "email": "caio.fernandes72@gmail.com"
     },
-    
     "scripts": {
         "start": "electron .",
         "build": "electron-builder"
