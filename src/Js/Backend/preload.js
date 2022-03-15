@@ -1,4 +1,4 @@
-const { ipcRenderer, contextBridge } = require("electron");
+const { ipcRenderer, contextBridge, dialog } = require("electron");
 
 const API = {
     close: () => {
@@ -10,9 +10,9 @@ const API = {
     min: () => {
         ipcRenderer.send("minApp");
     },
-    saveQrcode: (url) => {
-        ipcRenderer.send("salvarQrcode", url);
-    },
+    saveQrcode: (qrcode) => {
+        ipcRenderer.send("salvarQrcode", qrcode);
+    }
 };
 
 contextBridge.exposeInMainWorld("app", API);

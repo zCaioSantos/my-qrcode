@@ -55,18 +55,26 @@
                             <p>Texto</p>
                         </div>
                     </label>
+
                 </div>
 
                 <form class="form-input" id="form-website" >
                     <label for="input-website">Insira o seu website</label>
                     <input id="input-website" type="url" placeholder="http://www.seusite.com.br" required>
-                    <button onclick="qrcode.create();" type="submit">Gerar QR Code</button>
+
+                    <label for="input-tamanho" id="label__input">
+                        <p>Tamanho</p>
+                        <input id="value__inputTamanho" type="text">
+                    </label>
+
+                    <input id="input-tamanho" min="100" max="500" value="150"  type="range" onchange="input.setTamanho();">
+                    <button type="submit">Gerar QR Code</button>
                 </form>
 
                 <form class="form-input hidden" id="form-text">
                     <label for="input-texto">Insira um texto</label>
                     <input id="input-texto" type="texto" placeholder="Texto que deseja compartilhar" required>
-                    <button onclick="qrcode.create();" type="submit">Gerar QR Code</button>
+                    <button type="submit">Gerar QR Code</button>
                 </form>
                 
             </section>
@@ -76,7 +84,7 @@
                 <div class="previa__qrcode">
                     <img id="previu__qr" height="150" width="150" src="../../public/Image/Qr code.png" alt="QR-Code">
                     <p>Faça o download do seu QR code e potencialize a estratégia da sua marca.</p>
-                    <button id="bnt__salvar" onclick="aplicativo.save();">Salvar</button>
+                    <button id="bnt__salvar" onclick="aplicativo.save()">Salvar</button>
                 </div>
             </section>
         </main>
