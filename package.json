@@ -1,6 +1,6 @@
 {
     "name": "my-qrcode",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "description": "Um gerador simples de Qr Code",
     "main": "main.js",
     "author": {
@@ -14,6 +14,7 @@
     "build": {
         "appId": "My Qrcode",
         "copyright": "Copyright © 2022 - Caio Santos",
+        "productName": "My QRCode",
         "win": {
             "target": [
                 "nsis"
