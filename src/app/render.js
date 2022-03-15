@@ -9,26 +9,41 @@ const aplicativo = {
     min() {
         app.min();
     },
+    save() {
+        const qr = qrcode.pegarUrl();
+        if (qr !== false) {
+            app.saveQrcode(qr);
+        }
+
+        return
+    }
 };
 
 // Gerador de Qrcode
 const qrcode = {
-    create() {
+    pegarUrl () {
         const api =
-            "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
+        "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
 
         const option =
-            options.whichOneIsActive() === true
-                ? "input-website"
-                : "input-texto";
+        options.whichOneIsActive() === true
+            ? "input-website"
+            : "input-texto";
         const url = document.getElementById(option).value;
-        
+        const qr = api + url;
 
         if (url !== "") {
-            options.qrPreviewOpen();
-            options.salvarEnable(url);
+            return qr;
+        }
 
-            const qr = api + url;
+        return false
+    },
+    create() {
+
+        const qr = qrcode.pegarUrl();
+
+        if (qr !== false) {
+            options.qrPreviewOpen();
             const img = document.getElementById("previu__qr");
             img.src = "../../public/Image/loop.gif";
             setTimeout(() => {
@@ -73,13 +88,6 @@ const options = {
     qrPreviewClose() {
         const menu = document.getElementById("container__section__2");
         menu.classList.remove("animacaoEntradaEsquerda")
-    },
-    salvarEnable(url) {
-        const btn = document.getElementById("bnt__salvar");
-        btn.disabled = false;
-        btn.addEventListener('click', () => {
-            app.saveQrcode(url)
-        })
     }
 };
 
@@ -90,6 +98,7 @@ document
 document
     .getElementById("card-text")
     .addEventListener("click", () => options.toggle());
+
 // document
 //     .getElementById("container__section__2")
 //     .addEventListener("click", () => options.qrPrevieClose());

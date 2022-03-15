@@ -47,7 +47,7 @@ app.on("window-all-closed", () => {
 
 ipc.on("salvarQrcode", async (evt, message) => {
     const result = await dialog.showSaveDialog({
-        filters: [{ name: "All Files", extensions: ["png"] }],
+        filters: [{ name: "QRCode", extensions: ["png"] }],
     });
 
     if (result.canceled) {
@@ -55,7 +55,16 @@ ipc.on("salvarQrcode", async (evt, message) => {
     }
 
     const local = result.filePath;
-    QRCode.toFile(local, message, function (err) {
+    QRCode.toFile(local, message, {
+        errorCorrectionLevel: 'H',
+        width: 350
+    }, function (err) {
         if (err) throw err;
+        dialog.showMessageBox({
+            title: 'Sucesso',
+            buttons: ['Ok'],
+            type: "info",
+            message: 'Qrcode salvado com sucesso!',
+        });
     });
 });
