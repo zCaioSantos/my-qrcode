@@ -22,25 +22,23 @@ const aplicativo = {
 // Gerador de Qrcode
 const qrcode = {
     pegarUrl () {
-        const api =
-        "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
-
         const option =
         options.whichOneIsActive() === true
             ? "input-website"
             : "input-texto";
         const url = document.getElementById(option).value;
-        const qr = api + url;
 
         if (url !== "") {
-            return qr;
+            return url;
         }
 
         return false
     },
     create() {
+        const api =
+        "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
 
-        const qr = qrcode.pegarUrl();
+        const qr = api + qrcode.pegarUrl();
 
         if (qr !== false) {
             options.qrPreviewOpen();
