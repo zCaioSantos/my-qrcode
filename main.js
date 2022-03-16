@@ -5,12 +5,13 @@ const ipc = ipcMain;
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 820,
-        minWidth: 820,
+        width: 830,
+        minWidth: 830,
         height: 600,
         minHeight: 600,
         frame: false,
         icon: path.join(__dirname, "/public/Image/Logo.png"),
+        show: false,
         webPreferences: {
             contextIsolation: true,
             nodeIntegration: true,
@@ -18,6 +19,10 @@ const createWindow = () => {
             preload: path.join(__dirname + "/src/Js/Backend/preload.js"),
         },
     });
+
+    win.on('ready-to-show', () => {
+        win.show();
+    })
 
     win.loadFile(path.join(__dirname, "/src/app/index.html"));
     win.setMenu(null);
@@ -45,7 +50,11 @@ app.on("window-all-closed", () => {
     if (process.platform !== "darwin") app.quit();
 });
 
-ipc.on("salvarQrcode", async (evt, message) => {
+//=========================================================================
+// Backend - IPC
+//=========================================================================
+
+ipc.on("salvarQrcode", async (evt, args) => {
     const result = await dialog.showSaveDialog({
         filters: [{ name: "QRCode", extensions: ["png"] }],
     });
@@ -55,9 +64,9 @@ ipc.on("salvarQrcode", async (evt, message) => {
     }
 
     const local = result.filePath;
-    QRCode.toFile(local, message, {
+    QRCode.toFile(local, args.url, {
         errorCorrectionLevel: 'H',
-        width: message
+        width: args.tamanho
     }, function (err) {
         if (err) throw err;
         dialog.showMessageBox({

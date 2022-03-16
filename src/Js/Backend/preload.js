@@ -10,8 +10,12 @@ const API = {
     min: () => {
         ipcRenderer.send("minApp");
     },
-    saveQrcode: (qrcode) => {
-        ipcRenderer.send("salvarQrcode", qrcode);
+    saveQrcode: (args) => {
+        ipcRenderer.send("salvarQrcode", args);
+    },
+    createQrcode: async (args) => {
+        const result = ipcRenderer.send("createQrcode", args);
+        return result;
     }
 };
 

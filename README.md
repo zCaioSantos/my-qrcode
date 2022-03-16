@@ -14,7 +14,7 @@
 # Installation
 
 <div align="center">
-   <a href="https://github.com/zCaioSantos/myqrcode/releases/download/v2.1.2/My.QRCode.Setup.2.1.2.exe"><img src="https://user-images.githubusercontent.com/81544166/157966299-fffe4163-00c5-429b-8c2c-4a1b727b1e32.png" alt="Download button" /></a>
+   <a href="https://github.com/zCaioSantos/myqrcode/releases/download/v2.2.0/My.QRCode.Setup.2.2.0.exe"><img src="https://user-images.githubusercontent.com/81544166/158655127-39e3fc22-5b6f-425a-a98c-6a92b85329f0.png" alt="Download button" /></a>
    <p>Download the latest version from  <a href="https://github.com/zCaioSantos/myqrcode/releases">releases page</a> and run it.</p>
 
 </div>
@@ -42,7 +42,7 @@ npm start
 
 - [x] Gerar qrcode
 - [x] Salvar qrcode
-- [ ] Escolher o tamanho
+- [x] Escolher o tamanho
 - [ ] Escolher cores
 - [ ] Colocar logo
 

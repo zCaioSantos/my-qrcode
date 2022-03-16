@@ -33,54 +33,62 @@
 
         <main>
             <section class="container__section__1">
-                <h1>O conteudo do QR Code será:</h1>
-                <div class="cards__container">
+                <form id="form__principal">
+                    <h1 class="title">O conteudo do QR Code será:</h1>
 
-                    <label for="option__url" id="card-url">
-                        <input type="radio" id="option__url" name="option" value="url" checked>
-                        <div class="card__sigle">
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C1.5 2.17157 2.17157 1.5 3 1.5H6.5V18.5H3C2.17157 18.5 1.5 17.8284 1.5 17V3ZM7.5 18.5V1.5H17C17.8284 1.5 18.5 2.17157 18.5 3V17C18.5 17.8284 17.8284 18.5 17 18.5H7.5ZM7 19.5H3C1.61929 19.5 0.5 18.3807 0.5 17V3C0.5 1.61929 1.61929 0.5 3 0.5H7H17C18.3807 0.5 19.5 1.61929 19.5 3V17C19.5 18.3807 18.3807 19.5 17 19.5H7Z"/>
-                            </svg>
-                            <p>Website</p>
-                        </div>
-                    </label>
+                    <div class="cards__container">
 
-                    <label for="option__texto" id="card-text">
-                        <input type="radio" id="option__texto" name="option" value="texto" required>
-                        <div class="card__sigle">
-                            <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H19C19.2761 1.5 19.5 1.27614 19.5 1C19.5 0.723858 19.2761 0.5 19 0.5H1ZM1 4.5C0.723858 4.5 0.5 4.72386 0.5 5C0.5 5.27614 0.723858 5.5 1 5.5H15C15.2761 5.5 15.5 5.27614 15.5 5C15.5 4.72386 15.2761 4.5 15 4.5H1ZM0.5 9C0.5 8.72386 0.723858 8.5 1 8.5H19C19.2761 8.5 19.5 8.72386 19.5 9C19.5 9.27614 19.2761 9.5 19 9.5H1C0.723858 9.5 0.5 9.27614 0.5 9ZM1 12.5C0.723858 12.5 0.5 12.7239 0.5 13C0.5 13.2761 0.723858 13.5 1 13.5H15C15.2761 13.5 15.5 13.2761 15.5 13C15.5 12.7239 15.2761 12.5 15 12.5H1Z"/>
-                            </svg>
-                            <p>Texto</p>
-                        </div>
-                    </label>
+                        <label for="option__url" id="card__url">
+                            <input type="radio" id="option__url" name="option" value="url" checked>
+                            <div class="card__sigle">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C1.5 2.17157 2.17157 1.5 3 1.5H6.5V18.5H3C2.17157 18.5 1.5 17.8284 1.5 17V3ZM7.5 18.5V1.5H17C17.8284 1.5 18.5 2.17157 18.5 3V17C18.5 17.8284 17.8284 18.5 17 18.5H7.5ZM7 19.5H3C1.61929 19.5 0.5 18.3807 0.5 17V3C0.5 1.61929 1.61929 0.5 3 0.5H7H17C18.3807 0.5 19.5 1.61929 19.5 3V17C19.5 18.3807 18.3807 19.5 17 19.5H7Z"/>
+                                </svg>
+                                <p>Website</p>
+                            </div>
+                        </label>
+    
+                        <label for="option__texto" id="card__text">
+                            <input type="radio" id="option__texto" name="option" value="texto" required>
+                            <div class="card__sigle">
+                                <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0.5C0.723858 0.5 0.5 0.723858 0.5 1C0.5 1.27614 0.723858 1.5 1 1.5H19C19.2761 1.5 19.5 1.27614 19.5 1C19.5 0.723858 19.2761 0.5 19 0.5H1ZM1 4.5C0.723858 4.5 0.5 4.72386 0.5 5C0.5 5.27614 0.723858 5.5 1 5.5H15C15.2761 5.5 15.5 5.27614 15.5 5C15.5 4.72386 15.2761 4.5 15 4.5H1ZM0.5 9C0.5 8.72386 0.723858 8.5 1 8.5H19C19.2761 8.5 19.5 8.72386 19.5 9C19.5 9.27614 19.2761 9.5 19 9.5H1C0.723858 9.5 0.5 9.27614 0.5 9ZM1 12.5C0.723858 12.5 0.5 12.7239 0.5 13C0.5 13.2761 0.723858 13.5 1 13.5H15C15.2761 13.5 15.5 13.2761 15.5 13C15.5 12.7239 15.2761 12.5 15 12.5H1Z"/>
+                                </svg>
+                                <p>Texto</p>
+                            </div>
+                        </label>
+                        
+                    </div>
 
-                </div>
+                    <div class="form__inputs">
 
-                <form class="form-input" id="form-website" >
-                    <label for="input-website">Insira o seu website</label>
-                    <input id="input-website" type="url" placeholder="http://www.seusite.com.br" required>
+                        <label for="input__website" id="input__urlCard">
+                            <p>Insira o seu website</p>
+                            <input id="input__website" type="url" placeholder="http://www.seusite.com.br">
+                        </label>
 
-                    <label for="input-tamanho" id="label__input">
-                        <p>Tamanho</p>
-                        <input id="value__inputTamanho" type="text">
-                    </label>
+                        <label for="input__texto" id="input__textoCard" class="hidden">
+                            <p>Insira um texto</p>
+                            <input id="input__texto" type="texto" placeholder="Texto que deseja compartilhar">
+                        </label>
 
-                    <input id="input-tamanho" min="100" max="500" value="150"  type="range" onchange="input.setTamanho();">
-                    <button type="submit">Gerar QR Code</button>
+                        <label for="input__tamanho" id="label__tamanho">
+                            <div>
+                                <p>Tamanho</p>
+                                <input id="value__inputTamanho" type="text" value="150px" maxlength="5">
+                            </div>
+                            <input id="input__tamanho" step="1" min="100" max="500" value="150"  type="range" onmousemove="input.setTamanho();">
+                        </label>
+
+                        
+                        <button type="submit">Gerar QR Code</button>
+
+                    </div>
                 </form>
-
-                <form class="form-input hidden" id="form-text">
-                    <label for="input-texto">Insira um texto</label>
-                    <input id="input-texto" type="texto" placeholder="Texto que deseja compartilhar" required>
-                    <button type="submit">Gerar QR Code</button>
-                </form>
-                
             </section>
 
             <section class="container__section__2" id="container__section__2">
-                <h1>Prévia</h1>
+                <h1 class="title">Prévia</h1>
                 <div class="previa__qrcode">
                     <img id="previu__qr" height="150" width="150" src="../../public/Image/Qr code.png" alt="QR-Code">
                     <p>Faça o download do seu QR code e potencialize a estratégia da sua marca.</p>

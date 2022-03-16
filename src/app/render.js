@@ -15,11 +15,25 @@ const aplicativo = {
             tamanho: input.getTamanho()
         }
 
-        if (qr) {
+        if (qrcode.url) {
             app.saveQrcode(qrcode);
         }
-        return;
+
+        return
     },
+    async createQr() {
+        const qrcode = {
+            url: input.getLink(),
+            tamanho: input.getTamanho()
+        }
+
+        if (qrcode.url) {
+            const result = await app.createQrcode(qrcode);
+            return result
+        }
+
+        return
+    }
 };
 
 /* 
@@ -62,26 +76,26 @@ const options = {
         const optionActive = document.getElementById("option__url");
         if (optionActive.checked) {
             //Animação de entrada de preview
-            document.getElementById("form-website").classList.remove("hidden");
-            document.getElementById("form-text").classList.add("hidden");
+            document.getElementById("input__urlCard").classList.remove("hidden");
+            document.getElementById("input__textoCard").classList.add("hidden");
 
             //Mostrar imagem de previa
             document.getElementById("previu__qr").src =
                 "../../public/Image/Qr code.png";
 
             //Limpar input
-            document.getElementById("input-website").value = "";
+            document.getElementById("input__website").value = "";
         } else {
             //Animação de entrada de preview
-            document.getElementById("form-text").classList.remove("hidden");
-            document.getElementById("form-website").classList.add("hidden");
+            document.getElementById("input__textoCard").classList.remove("hidden");
+            document.getElementById("input__urlCard").classList.add("hidden");
 
             //Mostrar imagem de previa
             document.getElementById("previu__qr").src =
                 "../../public/Image/Qr code.png";
 
             //Limpar input
-            document.getElementById("input-texto").value = "";
+            document.getElementById("input__texto").value = "";
         }
     },
     whichOneIsActive() {
@@ -112,23 +126,21 @@ const options = {
 const input = {
     getTamanho() {
         document
-            .getElementById("input-tamanho")
+            .getElementById("input__tamanho")
             .addEventListener("change", () => {
-                const tamanho = document.getElementById("input-tamanho").value;
+                const tamanho = document.getElementById("input__tamanho").value;
                 return tamanho;
             });
     },
     getLink() {
-        const option = options.whichOneIsActive()
-            ? "input-website"
-            : "input-texto";
+        const option = options.whichOneIsActive() ? "input__website" : "input__texto";
         const url = document.getElementById(option).value;
 
         if (url === "") {
             return false;
         };
 
-        if (option === "input-website") {
+        if (option === "input__website") {
             if (util.validarUrl(url)) {
                 return url;
             } else {
@@ -139,11 +151,11 @@ const input = {
         return url;
     },
     getTamanho() {
-        let tamanho = document.getElementById('input-tamanho').value;
+        let tamanho = document.getElementById('input__tamanho').value;
         return tamanho;
     },
     setTamanho() {
-        let tamanho = document.getElementById("input-tamanho").value
+        let tamanho = document.getElementById("input__tamanho").value
         document.getElementById('value__inputTamanho').value = tamanho + "px"
     }
 };
@@ -174,20 +186,16 @@ const util = {
 // EventListenerS Padrões
 
 // Toggle options
+
 document
-    .getElementById("card-url")
+    .getElementById("card__url")
     .addEventListener("click", () => options.toggle());
 document
-    .getElementById("card-text")
+    .getElementById("card__text")
     .addEventListener("click", () => options.toggle());
 
 // Cancelar evento padrao do form
-document.getElementById("form-website").addEventListener("submit", (event) => {
-    event.preventDefault();
-    qrcode.create();
-});
-
-document.getElementById("form-text").addEventListener("submit", (event) => {
+document.getElementById("form__principal").addEventListener("submit", (event) => {
     event.preventDefault();
     qrcode.create();
 });
@@ -196,9 +204,9 @@ document.getElementById("value__inputTamanho").addEventListener('input', () => {
     let tamanho = document.getElementById('value__inputTamanho').value
     tamanho = tamanho.replace("px", "")
     if (tamanho => 100 && tamanho <= 500) {
-        document.getElementById('input-tamanho').value = tamanho
+        document.getElementById('input__tamanho').value = tamanho
         document.getElementById('value__inputTamanho').value = tamanho + "px"
-    } else {
-        document.getElementById('input-tamanho').value = 0
-    }
+        return
+    } 
+    document.getElementById('input__tamanho').value = 0
 })
