@@ -366,6 +366,8 @@ header > nav > ul > li:hover {
     border: none;
     outline: none;
     padding: 0;
+
+    border-radius: 5px;
 }
 
 ::-webkit-color-swatch {

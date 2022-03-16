@@ -14,8 +14,9 @@ const aplicativo = {
             url: input.getLink(),
             tamanho: input.getTamanho(),
             corP: input.getColorP(),
-            corS: input.getColorS()
+            corS: input.getColorS(),
         }
+        
 
         if (qrcode.url) {
             app.saveQrcode(qrcode);
