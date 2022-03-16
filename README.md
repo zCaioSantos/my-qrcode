@@ -37,6 +37,7 @@ npm start
 
 - Node.js
 - Electron
+- QRCode
 
 ## Features
 
