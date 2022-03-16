@@ -12,7 +12,9 @@ const aplicativo = {
     save() {
         const qrcode = {
             url: input.getLink(),
-            tamanho: input.getTamanho()
+            tamanho: input.getTamanho(),
+            corP: input.getColorP(),
+            corS: input.getColorS()
         }
 
         if (qrcode.url) {
@@ -149,6 +151,14 @@ const input = {
         };
 
         return url;
+    },
+    getColorP() {
+        let corP = document.getElementById('input__color_p').value;
+        return corP;
+    },
+    getColorS() {
+        let corS = document.getElementById('input__color_s').value;
+        return corS;
     },
     getTamanho() {
         let tamanho = document.getElementById('input__tamanho').value;

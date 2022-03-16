@@ -66,7 +66,11 @@ ipc.on("salvarQrcode", async (evt, args) => {
     const local = result.filePath;
     QRCode.toFile(local, args.url, {
         errorCorrectionLevel: 'H',
-        width: args.tamanho
+        width: args.tamanho,
+        color: {
+            dark: args.corP,
+            light: args.corS
+        }
     }, function (err) {
         if (err) throw err;
         dialog.showMessageBox({

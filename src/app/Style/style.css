@@ -336,6 +336,55 @@ header > nav > ul > li:hover {
 /* Fechar - Input Range */
 
 
+/*
+        INPUT COLORS
+*/
+
+
+.calors__container {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.1em;
+}
+
+.calors__container > label {
+    width: 100%;
+}
+
+.calors__container > label > p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.calors__container > label > input[type=color] {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+::-webkit-color-swatch {
+    border: none;
+}
+::-webkit-color-swatch-wrapper {
+
+    padding: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner {
+    border: none;
+}
+::-moz-focus-inner {
+    padding: 0;
+}
+  
+
 
 /*
 ===============================================
