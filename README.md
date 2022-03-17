@@ -14,7 +14,7 @@
 # Installation
 
 <div align="center">
-   <a href="https://github.com/zCaioSantos/myqrcode/releases/download/v2.2.1/My.QRCode.Setup.2.2.1.exe"><img src="https://user-images.githubusercontent.com/81544166/158655127-39e3fc22-5b6f-425a-a98c-6a92b85329f0.png" alt="Download button" /></a>
+   <a href="https://github.com/zCaioSantos/myqrcode/releases/download/v2.3.0/My.QRCode.Setup.2.3.0.exe"><img src="https://user-images.githubusercontent.com/81544166/158655127-39e3fc22-5b6f-425a-a98c-6a92b85329f0.png" alt="Download button" /></a>
    <p>Download the latest version from  <a href="https://github.com/zCaioSantos/myqrcode/releases">releases page</a> and run it.</p>
 
 </div>

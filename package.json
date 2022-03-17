@@ -1,6 +1,6 @@
 {
     "name": "my-qrcode",
-    "version": "2.2.1",
+    "version": "2.3.0",
     "description": "Um gerador simples de Qr Code",
     "main": "main.js",
     "author": {

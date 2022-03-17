@@ -27,7 +27,9 @@ const aplicativo = {
     async createQr() {
         const qrcode = {
             url: input.getLink(),
-            tamanho: input.getTamanho()
+            tamanho: input.getTamanho(),
+            corP: input.getColorP(),
+            corS: input.getColorS(),
         }
 
         if (qrcode.url) {
@@ -47,22 +49,22 @@ const aplicativo = {
 
 // Gerador de Qrcode
 const qrcode = {
-    create() {
-        const api =
-            "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chld=H|1&chl=";
-        const url = input.getLink();
-        const qr = api + url;
+    async create() {
+        const qr = await aplicativo.createQr();
 
-        if (!url) {
-            document.getElementById("previu__qr").src =
-                "../../public/Image/Qr code.png";
-        } else {
+        if (qr) {
             options.qrPreviewOpen();
+
             const img = document.getElementById("previu__qr");
             img.src = "../../public/Image/loop.gif";
+
             setTimeout(() => {
                 img.src = qr;
             }, 1000);
+
+        } else {
+            document.getElementById("previu__qr").src =
+                "../../public/Image/Qr code.png";
         }
     },
 };
@@ -220,4 +222,12 @@ document.getElementById("value__inputTamanho").addEventListener('input', () => {
         return
     } 
     document.getElementById('input__tamanho').value = 0
+})
+
+document.getElementById("input__color_p").addEventListener('change', () => {
+    qrcode.create();
+})
+
+document.getElementById("input__color_s").addEventListener('change', () => {
+    qrcode.create();
 })

@@ -14,7 +14,7 @@ const API = {
         ipcRenderer.send("salvarQrcode", args);
     },
     createQrcode: async (args) => {
-        const result = ipcRenderer.send("createQrcode", args);
+        const result = ipcRenderer.sendSync("createQrcode", args);
         return result;
     }
 };

@@ -82,3 +82,15 @@ ipc.on("salvarQrcode", async (evt, args) => {
     });
 });
 
+ipc.on("createQrcode", async (evt, args) => {
+    const qrcode = await QRCode.toDataURL(args.url, {
+        errorCorrectionLevel: 'H',
+        width: 160,
+        color: {
+            dark: args.corP,
+            light: args.corS
+        }
+    });
+
+    evt.returnValue = qrcode;
+})

@@ -367,11 +367,12 @@ header > nav > ul > li:hover {
     outline: none;
     padding: 0;
 
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 ::-webkit-color-swatch {
     border: none;
+    border-radius: 5px;
 }
 ::-webkit-color-swatch-wrapper {
 
