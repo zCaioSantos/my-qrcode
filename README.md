@@ -9,7 +9,7 @@
 
 # Sample preview running the app:
 
-![Preview](https://user-images.githubusercontent.com/81544166/157906351-f0a39706-143f-4257-aab4-340b55b21c93.png)
+![Preview](https://user-images.githubusercontent.com/81544166/158817850-639d73e2-5b7a-4f6c-ae37-fd6f79698c19.png)
 
 # Installation
 
