@@ -1,7 +1,6 @@
 <div align="center">
    <img height="200" src="https://user-images.githubusercontent.com/81544166/157904069-4d9e7e32-45a1-480b-b026-82cc6dd9a9f1.png" alt="Logo QrCode" />
    <h1>My QrCode</h1>
-   <p>Um simples gerador de Qrcode</p>
    <img src="https://img.shields.io/github/downloads/zCaioSantos/myqrcode/total.svg" />
    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
    <img src="https://img.shields.io/github/followers/zCaioSantos.svg?style=social&label=Follow&maxAge=2592000" />
@@ -41,11 +40,10 @@ npm start
 
 ## Features
 
-- [x] Gerar qrcode
-- [x] Salvar qrcode
-- [x] Escolher o tamanho
-- [x] Escolher cores
-- [ ] Colocar logo
+- [x] Generate qrcode
+- [x] Save qrcode
+- [x] Choose size
+- [x] Choose colors
 
 # Author
 
